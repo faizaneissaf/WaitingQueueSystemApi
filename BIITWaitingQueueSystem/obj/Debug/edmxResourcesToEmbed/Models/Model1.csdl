@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BiitProjectQueueSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="MeetingSchedule">
+    <Key>
+      <PropertyRef Name="meeting_id" />
+    </Key>
+    <Property Name="meeting_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="group_no" Type="Int32" />
+    <Property Name="reg_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_gender" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="std_class" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_supervisor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="project_title" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="technology" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="meeting_time" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="meeting_date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="meeting_status" Type="Int32" />
+    <Property Name="fyp" Type="Int32" />
+    <Property Name="remarks" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Reschedule_Requests">
+    <Key>
+      <PropertyRef Name="req_id" />
+    </Key>
+    <Property Name="req_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="req_msg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="std_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_reg_no" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_cls" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="msg_status" Type="Int32" />
+    <Property Name="std_supervisor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="std_id" />
+    </Key>
+    <Property Name="std_id" Type="Int32" Nullable="false" />
+    <Property Name="std_regno" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_supervisor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="std_phoneno" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="std_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="user_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="user_type" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="BiitProjectQueueSystemEntities9" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="MeetingSchedules" EntityType="Self.MeetingSchedule" />
+    <EntitySet Name="Reschedule_Requests" EntityType="Self.Reschedule_Requests" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+  </EntityContainer>
+</Schema>

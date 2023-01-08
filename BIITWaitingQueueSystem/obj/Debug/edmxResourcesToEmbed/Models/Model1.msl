@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BiitProjectQueueSystemModelStoreContainer" CdmEntityContainer="BiitProjectQueueSystemEntities9">
+    <EntitySetMapping Name="MeetingSchedules">
+      <EntityTypeMapping TypeName="BiitProjectQueueSystemModel.MeetingSchedule">
+        <MappingFragment StoreEntitySet="MeetingSchedules">
+          <ScalarProperty Name="meeting_id" ColumnName="meeting_id" />
+          <ScalarProperty Name="group_no" ColumnName="group_no" />
+          <ScalarProperty Name="reg_no" ColumnName="reg_no" />
+          <ScalarProperty Name="std_name" ColumnName="std_name" />
+          <ScalarProperty Name="std_gender" ColumnName="std_gender" />
+          <ScalarProperty Name="std_class" ColumnName="std_class" />
+          <ScalarProperty Name="std_supervisor" ColumnName="std_supervisor" />
+          <ScalarProperty Name="project_title" ColumnName="project_title" />
+          <ScalarProperty Name="technology" ColumnName="technology" />
+          <ScalarProperty Name="meeting_time" ColumnName="meeting_time" />
+          <ScalarProperty Name="meeting_date" ColumnName="meeting_date" />
+          <ScalarProperty Name="meeting_status" ColumnName="meeting_status" />
+          <ScalarProperty Name="fyp" ColumnName="fyp" />
+          <ScalarProperty Name="remarks" ColumnName="remarks" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reschedule_Requests">
+      <EntityTypeMapping TypeName="BiitProjectQueueSystemModel.Reschedule_Requests">
+        <MappingFragment StoreEntitySet="Reschedule_Requests">
+          <ScalarProperty Name="req_id" ColumnName="req_id" />
+          <ScalarProperty Name="req_msg" ColumnName="req_msg" />
+          <ScalarProperty Name="std_name" ColumnName="std_name" />
+          <ScalarProperty Name="std_reg_no" ColumnName="std_reg_no" />
+          <ScalarProperty Name="std_cls" ColumnName="std_cls" />
+          <ScalarProperty Name="msg_status" ColumnName="msg_status" />
+          <ScalarProperty Name="std_supervisor" ColumnName="std_supervisor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="BiitProjectQueueSystemModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="std_id" ColumnName="std_id" />
+          <ScalarProperty Name="std_regno" ColumnName="std_regno" />
+          <ScalarProperty Name="std_fullname" ColumnName="std_fullname" />
+          <ScalarProperty Name="std_supervisor" ColumnName="std_supervisor" />
+          <ScalarProperty Name="std_email" ColumnName="std_email" />
+          <ScalarProperty Name="std_address" ColumnName="std_address" />
+          <ScalarProperty Name="std_phoneno" ColumnName="std_phoneno" />
+          <ScalarProperty Name="std_password" ColumnName="std_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="BiitProjectQueueSystemModel.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="BiitProjectQueueSystemModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="user_type" ColumnName="user_type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
